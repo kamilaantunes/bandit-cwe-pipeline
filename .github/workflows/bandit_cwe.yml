@@ -1,37 +1,37 @@
 name: Bandit CWE Pipeline
 
 on:
- push:
-  branches:
-   - main
+  push:
+    branches:
+      - main
   pull_request:
-   branches:
-    - main
+    branches:
+      - main
 
 jobs:
- bandit-analysis:
-  runs-on: ubuntu-latest
+  bandit-analysis:
+    runs-on: ubuntu-latest
 
-  steps:
-   - name: Checkout repository
-     uses: actions/checkout@v2
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-   - name: Set up Python
-     uses: actions/setup-python@v2
-     with:
-      python-version: '3.9'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
 
-   - name: Install Bandit
-     run: pip install bandit
+      - name: Install Bandit
+        run: pip install bandit
 
-   - name: Run Bandit
-     run: bandit -r ./ > bandit_report.json
+      - name: Run Bandit
+        run: bandit -r ./ > bandit_report.json
 
-   - name: Add CWE Code
-     runs: pyton3 add_cwe_to_bandit.py
+      - name: Add CWE Codes
+        run: python3 add_cwe_to_bandit.py
 
-   - name: Save Report
-     uses: actions/upload-artifact@v2
-     with:
-      name: bandit-report-with-cwe
-      path: bandit_report_with_cwe.json
+      - name: Save Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: bandit-report-with-cwe
+          path: bandit_report_with_cwe.json
