@@ -10,21 +10,26 @@ on:
 
 jobs:
  bandit-analysis:
-  runs-on: ubunt-latest
+  runs-on: ubuntu-latest
 
   steps:
    - name: Checkout repository
      uses: actions/checkout@v2
+
    - name: Set up Python
      uses: actions/setup-python@v2
      with:
       python-version: '3.9'
+
    - name: Install Bandit
      run: pip install bandit
+
    - name: Run Bandit
-     run: bandit /r ./ > bandit_report.json
+     run: bandit -r ./ > bandit_report.json
+
    - name: Add CWE Code
      runs: pyton3 add_cwe_to_bandit.py
+
    - name: Save Report
      uses: actions/upload-artifact@v2
      with:
