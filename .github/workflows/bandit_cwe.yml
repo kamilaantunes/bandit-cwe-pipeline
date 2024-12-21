@@ -10,7 +10,7 @@ on:
 
 jobs:
   bandit-analysis:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout repository
@@ -31,7 +31,7 @@ jobs:
         run: python3 add_cwe_to_bandit.py
 
       - name: Save Report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: bandit-report-with-cwe
           path: bandit_report_with_cwe.json
