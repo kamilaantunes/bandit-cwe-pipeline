@@ -1,0 +1,104 @@
+    1  sudo apt update && sudo apt upgrade /y
+    2  sudo apt update && sudo apt upgrade -y
+    3  sudo apt install git curl build-essential -y
+    4  sudo apt update && sudo apt upgrade -y
+    5  sudo apt install python3 python3-pip -y
+    6  pip3 install bandit
+    7  python --version
+    8  pip3 -v
+    9  pip3 --version
+   10  pip3 install bandit
+   11  python3 -m ~/bandit-env
+   12  dir
+   13  source ~/bandit-env/bin/activate
+   14  pip install bandit
+   15  python3 -m venv ~/bandit-env
+   16  apt install python3.12-venv
+   17  sudo apt install python 3.12-venv
+   18  python3 -m venv ~/bandit-env
+   19  sudo apt update
+   20  sudo apt install python3.12-venv -y
+   21  python3 -m venv ~/bandit-env
+   22  source ~/bandit-env/activate
+   23  dir
+   24  source bandit-env/bin/activate
+   25  pip install bandit
+   26  bandit --version
+   27  exit
+   28  git clone https://github.com/kamilaantunes/bandit-cwe-pipeline.git
+   29  cd bandit-cwe-pipeline
+   30  echo 'print("Hello, Bandit!")' > example.py
+   31  git add example.py
+   32  git commit -m "Add example Python file"
+   33  git config --globar user.name "kamilaantunes1@gmail.com"
+   34  git config --globar user.email "kamilaantunes1@gmail.com"
+   35  git config --global user.name "Kamila"
+   36  git config --global user.email "kamilaantunes1@gmail.com"
+   37  git config --global --list
+   38  git commit -m "Add example Python file"
+   39  git push
+   40  mkdir /p .github/workflows
+   41  mkdir -p github/workflows
+   42  nano .github/workflows/bandit_cwe.yml
+   43  pwd
+   44  ls
+   45  mkdir -p .github/workflows
+   46  ls
+   47  ls -l github
+   48  ls -l .github
+   49  ls -l .github/workflows
+   50  nano .github/workflows/bandit_cwe.yml
+   51  ls /l .github/workflows
+   52  ls -l .github/workflows
+   53  git add .github/workflows/bandit_cwe.yml
+   54  git commit -m "Add Github Actions workflow for Bandit CWE"
+   55  git push
+   56  nano .github/workflows/bandit_cwe.yml
+   57  git add .github/workflows/bandit_cwe.yml
+   58  git commit -m "Fix workflow configuration"
+   59  git push
+   60  nano .githubb/workflows/bandit_cwe.yml
+   61  nano .github/workflows/bandit_cwe.yml
+   62  ls -l github/workflows
+   63  ls -l .github/workflows
+   64  git add .github/workflows/bandit_cwe.yml
+   65  git add "Fix workflow configuration v2"
+   66  git commit -m "Fix workflow confiuration v2"
+   67  git push
+   68  nnnano .github/workflows/bandit_cwe.yml
+   69  nano .github/workflows/bandit_cwe.yml
+   70  git add .github/workflows/bandit_cwe.yml
+   71  git commit -m "Update upload-artifact and fix ubuntu version"
+   72  git push
+   73  nano .github/workflows/bandit_cwe.yml
+   74  git add .
+   75  git commit -m "Adjust Bandit settings to fix pipeline failure"
+   76  git push
+   77  nano .github/workflows/bandit_cwe.yml
+   78  git add .
+   79  git commit -m "Adjust Bandit settings to fix pipeline failure v2"
+   80  git push
+   81  nano .github/workflows/bandit_cwe.yml
+   82  git add .
+   83  git add .github/workflows/bandit_cwe.yml
+   84  git commit -m "Fix workflow to handle Bandit exit code"
+   85  git push
+   86  sudo ./lynis audit system
+   87  sudo ./lynis audit system --report-file /path/to/custom_report.dat
+   88  cd../
+   89  cd ../
+   90  git clone https://github.com/django/django.git
+   91  cd django
+   92  bandit -r ./ > bandit_report.json
+   93  cat bandit_report.json
+   94  cd ~/bandit-cwe-pipeline
+   95  nano add_cwe_to_bandit.py
+   96  nano bandit_to_cwe.json
+   97  python3 add_cwe_to_bandit.py
+   98  pwd
+   99  bandit -r ./ bandit_report.json
+  100  ls
+  101  python3 add_cwe_to_bandit.py
+  102  cat bandit_report_with_cwe.json
+  103  python3 add_cwe_to_bandit.py
+  104  history > vm_commands.log
