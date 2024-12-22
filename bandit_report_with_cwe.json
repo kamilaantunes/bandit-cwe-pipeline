@@ -1,0 +1,57 @@
+{
+   [
+        {
+            "filename": "examplVulnability.py",
+        }
+    ],
+    "generated_at": "2024-12-22T14:37:45Z",
+    "metrics": {
+        "_totals": {
+            "CONFIDENCE.HIGH": 5,
+            "CONFIDENCE.LOW": 2,
+            "CONFIDENCE.MEDIUM": 3,
+            "CONFIDENCE.UNDEFINED": 0,
+            "SEVERITY.HIGH": 4,
+            "SEVERITY.LOW": 2,
+            "SEVERITY.MEDIUM": 4,
+            "SEVERITY.UNDEFINED": 0,
+            "loc": 150,
+            "nosec": 1
+        }
+    },
+    "results": [
+     {
+       "filename": "exampleVulnability.py",
+       "test_name": "hardcarded_password_string",
+       "test_id": "B105",
+       "issue_severity": "HIGH",
+       "issue_confidence": "HIGH",
+       "issue_text": "Possible hardcorded password: 'mypassword123'.",
+       "line_number": 12,
+       "line_ranger": [12],
+       "code": "password = 'mypassword123'"
+     },
+     {
+      "filename": "exampleVulnability.py",
+      "t_name": "blacklist_calls",
+      "test_id": "B301",
+      "issue_severity": "MEDIUM",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of insecure MD5 hash function.",
+      "line_number": 25,
+      "line_range": [25],
+      "code": "hashlib.md5(data).hexdigest()"
+    },
+    {
+      "filename": "exampleVulnerability.py",
+      "test_name": "insecure_requests",
+      "test_id": "B501",
+      "issue_severity": "HIGH",
+      "issue_confidence": "HIGH",
+      "issue_text": "Use of insecure URL scheme (http://).",
+      "line_number": 40,
+      "line_range": [40],
+      "code": "response = requests.get('http://example.com')"
+    }
+     ]
+}
