@@ -31,7 +31,7 @@ jobs:
         run: python3 add_cwe_to_bandit.py
 
       - name: Save Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: bandit-report-with-cwe
           path: bandit_report_with_cwe.json
